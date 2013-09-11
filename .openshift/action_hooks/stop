@@ -9,6 +9,7 @@ then
     client_result "Development Application is already stopped"
 else
     kill `ps -ef | grep myapp_server.pl | grep -v grep | awk '{ print $2 }'` > /dev/null 2>&1
+    client_result "Killing development server"
 fi
 
 
@@ -19,6 +20,7 @@ then
     client_result "FASTCGI Application is already stopped"
 else
     kill `ps -ef | grep myapp_fastcgi.pl | grep -v grep | awk '{ print $2 }'` > /dev/null 2>&1
+    client_result "Killing fastcgi server"
 fi
 
 
@@ -26,5 +28,6 @@ if [ -z "$( lsof -i tcp:8080)" ]
 then 
     client_result "Nothing running on port 8080"
 else
-    kill `lsof -i tcp:8080 | grep ! COMMAND | awk '{ print $2}'` > /dev/null 2>&1
+    kill `lsof -i tcp:8080 | grep -v COMMAND | awk '{ print $2}'` > /dev/null 2>&1
+    client_result "Killing all processes on port 8080"
 fi
