@@ -22,6 +22,9 @@ use Catalyst qw/
     Static::Simple
 /;
 
+use CatalystX::RoleApplicator;
+use Data::Structure::Util;
+
 extends 'Catalyst';
 
 #Need these options for ProxyPass
