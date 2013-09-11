@@ -2,9 +2,18 @@
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
 
 # The logic to stop your application should be put in this script.
+# Regular Catalyst Development server
 if [ -z "$(ps -ef | grep myapp_server.pl | grep -v grep)" ]
 then
-    client_result "Application is already stopped"
+    client_result "Development Application is already stopped"
 else
     kill `ps -ef | grep myapp_server.pl | grep -v grep | awk '{ print $2 }'` > /dev/null 2>&1
+fi
+
+#FASTCGI Production
+if [ -z "$(ps -ef | grep myapp_fastcgi.pl | grep -v grep)" ]
+then
+    client_result "FASTCGI Application is already stopped"
+else
+    kill `ps -ef | grep myapp_fastcgi.pl | grep -v grep | awk '{ print $2 }'` > /dev/null 2>&1
 fi
