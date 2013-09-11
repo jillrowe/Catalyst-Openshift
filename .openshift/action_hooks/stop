@@ -2,6 +2,7 @@
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
 
 # The logic to stop your application should be put in this script.
+
 # Regular Catalyst Development server
 if [ -z "$(ps -ef | grep myapp_server.pl | grep -v grep)" ]
 then
