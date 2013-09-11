@@ -11,7 +11,9 @@ else
     kill `ps -ef | grep myapp_server.pl | grep -v grep | awk '{ print $2 }'` > /dev/null 2>&1
 fi
 
+
 #FASTCGI Production
+#Not sure if this stops it or not
 if [ -z "$(ps -ef | grep myapp_fastcgi.pl | grep -v grep)" ]
 then
     client_result "FASTCGI Application is already stopped"
