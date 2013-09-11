@@ -3,4 +3,5 @@
 # script. The application will work only if it binds to
 # $OPENSHIFT_DIY_IP:8080
 
+cd ~/app-root/data/perl-new/bin
 nohup ./perl $OPENSHIFT_REPO_DIR/MyApp/script/myapp_server.pl -r -p $OPENSHIFT_DIY_PORT -h $OPENSHIFT_DIY_IP  > $OPENSHIFT_DIY_DIR/logs/server.log 2>&1 &
