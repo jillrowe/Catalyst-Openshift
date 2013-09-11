@@ -5,7 +5,11 @@ https://github.com/openshift/origin-server/tree/master/cartridges/openshift-orig
 Followed directions for perl here: https://github.com/dns/DIY-Perl-OpenShift-Cartridge
 
 
+Run CPAN
 cd ~/app-root/data/perl-new/bin
+HOME=~/app-root/data/ ./perl cpan
+
+install Term::ReadKey Catalyst::Devel FCGI Log::Log4perl::Catalyst
 
 Start the development server
 ./perl /var/lib/openshift/522f0e144382ec352300020f/app-root/runtime/repo/MyApp/script/myapp_server.pl -r -p $OPENSHIFT_DIY_PORT -h $OPENSHIFT_DIY_IP
