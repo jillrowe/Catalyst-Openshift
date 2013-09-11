@@ -14,6 +14,7 @@ install Term::ReadKey Catalyst::Devel FCGI Log::Log4perl::Catalyst FCGI::ProcMan
 For FastCGI
 CatalystX::RoleApplicator
 Data::Structure::Util
+Catalyst::TraitFor::Request::ProxyBase
 
 Start the development server
 ./perl /var/lib/openshift/522f0e144382ec352300020f/app-root/runtime/repo/MyApp/script/myapp_server.pl -r -p $OPENSHIFT_DIY_PORT -h $OPENSHIFT_DIY_IP
