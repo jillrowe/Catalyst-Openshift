@@ -34,3 +34,12 @@ else
     kill `lsof -i tcp:8080 | grep -v "COMMAND" | awk '{ print $2}'` > /dev/null 2>&1
     client_result "Killing all processes on port 8080"
 fi
+
+client_result "Checking for anything running on port 15000"
+if [ -z "$( lsof -i tcp:15000)" ]
+then 
+    client_result "Nothing running on port 15000"
+else
+    kill `lsof -i tcp:15000 | grep -v "COMMAND" | awk '{ print $2}'` > /dev/null 2>&1
+    client_result "Killing all processes on port 15000"
+fi
