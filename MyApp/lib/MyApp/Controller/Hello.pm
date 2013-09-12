@@ -27,11 +27,11 @@ sub index :Path :Args(0) {
     $c->response->body('Matched MyApp::Controller::Hello in Hello.');
 }
 
-sub hello :Global {
-    my ( $self, $c ) = @_;
-
-    $c->response->body("Hello, World!");
-}
+#sub hello :Global {
+#    my ( $self, $c ) = @_;
+#
+#    $c->response->body("Hello, World!");
+#}
 
 =head1 AUTHOR
 
