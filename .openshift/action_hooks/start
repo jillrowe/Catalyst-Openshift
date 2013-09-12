@@ -14,6 +14,7 @@ cd ~/app-root/data/perl-new/bin
 #FastCGI
 nohup ./perl $OPENSHIFT_REPO_DIR/MyApp/script/myapp_fastcgi.pl --listen $OPENSHIFT_DIY_IP:15000  >> $OPENSHIFT_DIY_DIR/logs/server.log 2>&1 &
 
+
 #Just for testing
 #./perl $OPENSHIFT_REPO_DIR/MyApp/script/myapp_fastcgi.pl --listen $OPENSHIFT_DIY_IP:15000  
 
