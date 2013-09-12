@@ -4,6 +4,7 @@ https://github.com/openshift/origin-server/tree/master/cartridges/openshift-orig
 
 Followed directions for perl here: https://github.com/dns/DIY-Perl-OpenShift-Cartridge
 
+Followed directions for nginx here: https://www.openshift.com/blogs/lightweight-http-serving-using-nginx-on-openshift
 
 Run CPAN
 cd ~/app-root/data/perl-new/bin
@@ -28,3 +29,6 @@ kill `ps -ef | grep myapp_server.pl | grep -v grep | awk '{ print $2 }'` > /dev/
 exit 0
 
 TODO figure out fastcgi probably with nginx
+
+
+
