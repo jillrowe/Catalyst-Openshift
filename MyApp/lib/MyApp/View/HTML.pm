@@ -5,8 +5,19 @@ use namespace::autoclean;
 extends 'Catalyst::View::TT';
 
 __PACKAGE__->config(
-    TEMPLATE_EXTENSION => '.tt',
+    TEMPLATE_EXTENSION => '.tt2',
     render_die => 1,
+);
+
+
+__PACKAGE__->config(
+# Configure the view
+    'View::HTML' => {
+        #Set the location for TT files
+        INCLUDE_PATH => [
+            __PACKAGE__->path_to( 'root', 'tt' ),
+        ],
+    },
 );
 
 =head1 NAME
