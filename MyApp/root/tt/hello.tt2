@@ -8,9 +8,9 @@
 </head>
 
     <body>
-        <div id="header">
+        <h1>
             MyApp
-        </div>
+        </h1>
         <p>
             This is a TT view template, called '[% template.name %]'.
         </p>

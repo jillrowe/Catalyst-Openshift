@@ -34,3 +34,9 @@
 .error {
     color: #f00;
 }
+h1 {
+    background-color:#CCC;   
+    border: 1px solid;
+    color:#39F;
+    text-align: center;    
+}
