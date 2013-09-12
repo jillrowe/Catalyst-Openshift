@@ -8,10 +8,11 @@
 </head>
 
     <body>
-
+        <div id="header">
+            MyApp
+        </div>
         <p>
             This is a TT view template, called '[% template.name %]'.
         </p>
-
     </body>
 </html>
