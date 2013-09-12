@@ -10,6 +10,8 @@ cd ~/app-root/data/perl-new/bin
 #FastCGI
 #nohup ./perl $OPENSHIFT_REPO_DIR/MyApp/script/myapp_fastcgi.pl --listen $OPENSHIFT_DIY_IP:$OPENSHIFT_DIY_PORT  >> $OPENSHIFT_DIY_DIR/logs/server.log 2>&1 &
 
+#Just for testing
+#./perl $OPENSHIFT_REPO_DIR/MyApp/script/myapp_fastcgi.pl --listen $OPENSHIFT_DIY_IP:15000  
 
 # $OPENSHIFT_INTERNAL_IP:8080
 # nohup $OPENSHIFT_REPO_DIR/diy/testrubyserver.rb $OPENSHIFT_INTERNAL_IP $OPENSHIFT_REPO_DIR/diy > $OPENSHIFT_DIY_LOG_DIR/server.log 2>&1 &
