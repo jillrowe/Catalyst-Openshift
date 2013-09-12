@@ -23,8 +23,8 @@ use Catalyst qw/
 /;
 
 #Need this for apache but not nginx
-#use CatalystX::RoleApplicator;
-#use Data::Structure::Util;
+use CatalystX::RoleApplicator;
+use Data::Structure::Util;
 
 extends 'Catalyst';
 
@@ -32,9 +32,9 @@ extends 'Catalyst';
 __PACKAGE__->config->{using_frontend_proxy} = 1;
 __PACKAGE__->config->{"X-Forwarded-Port"} = 443;
 
-# __PACKAGE__->apply_request_class_roles(qw/
-#    Catalyst::TraitFor::Request::ProxyBase
-#/);
+ __PACKAGE__->apply_request_class_roles(qw/
+    Catalyst::TraitFor::Request::ProxyBase
+/);
 
 our $VERSION = '0.01';
 
