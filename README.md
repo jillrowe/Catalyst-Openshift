@@ -15,6 +15,9 @@ For FastCGI
 CatalystX::RoleApplicator
 Data::Structure::Util
 Catalyst::TraitFor::Request::ProxyBase
+Catalyst::View::TT
+FCGI
+FCGI::ProcManager
 
 Start the development server
 ./perl /var/lib/openshift/522f0e144382ec352300020f/app-root/runtime/repo/MyApp/script/myapp_server.pl -r -p $OPENSHIFT_DIY_PORT -h $OPENSHIFT_DIY_IP
