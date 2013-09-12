@@ -27,3 +27,5 @@ Stop the development server
 #!/bin/bash
 kill `ps -ef | grep myapp_server.pl | grep -v grep | awk '{ print $2 }'` > /dev/null 2>&1
 exit 0
+
+again
