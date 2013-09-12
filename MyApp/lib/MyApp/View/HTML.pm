@@ -25,9 +25,8 @@ __PACKAGE__->config(
     TEMPLATE_EXTENSION => '.tt2',
     render_die => 1,
 
-
     INCLUDE_PATH => [
-        MyApp->path_to( 'root', 'src' ),
+        MyApp->path_to( 'root', 'tt' ),
         MyApp->path_to( 'root', 'static' ),
     ],
 );
