@@ -46,10 +46,10 @@ sub default :Path {
 }
 
 
-sub hello :Global {
+sub hellos :Global {
     my ( $self, $c ) = @_;
 
-    $c->stash(template => 'hello.tt');
+    $c->stash(template => 'hello.tt2');
 }
 =head2 end
 
