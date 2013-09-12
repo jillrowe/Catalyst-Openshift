@@ -27,6 +27,7 @@ __PACKAGE__->config(
 
     INCLUDE_PATH => [
         MyApp->path_to( 'root', 'tt' ),
+        MyApp->path_to( 'root', 'static' ),
     ],
 );
 
