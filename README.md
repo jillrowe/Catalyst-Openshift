@@ -9,7 +9,7 @@ Run CPAN
 cd ~/app-root/data/perl-new/bin
 HOME=~/app-root/data/ ./perl cpan
 
-install Term::ReadKey Catalyst::Devel FCGI Log::Log4perl::Catalyst FCGI::ProcManager
+install Term::ReadKey Catalyst::Devel Catalyst::ScriptRunner FCGI Log::Log4perl::Catalyst FCGI::ProcManager
 
 For FastCGI
 CatalystX::RoleApplicator
