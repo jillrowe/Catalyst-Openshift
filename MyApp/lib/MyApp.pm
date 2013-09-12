@@ -22,8 +22,9 @@ use Catalyst qw/
     Static::Simple
 /;
 
-use CatalystX::RoleApplicator;
-use Data::Structure::Util;
+#Need this for apache but not nginx
+#use CatalystX::RoleApplicator;
+#use Data::Structure::Util;
 
 extends 'Catalyst';
 

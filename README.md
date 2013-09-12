@@ -13,9 +13,6 @@ HOME=~/app-root/data/ ./perl cpan
 install Term::ReadKey Catalyst::Devel Catalyst::ScriptRunner FCGI Log::Log4perl::Catalyst FCGI::ProcManager
 
 For FastCGI
-CatalystX::RoleApplicator
-Data::Structure::Util
-Catalyst::TraitFor::Request::ProxyBase
 Catalyst::View::TT
 FCGI
 FCGI::ProcManager
