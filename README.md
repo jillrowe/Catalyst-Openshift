@@ -26,6 +26,7 @@ I tried to get all the modules, but I probably missed a few.
 
 When I was debugging I put a restart.sh script in my $OPENSHIFT_DATA_DIR directory that was just a cat of my .openshift/action_hook/start and stop files. 
 
+
 rhc ssh name-of-app
 cd $OPENSHIFT_DATA_DIR
 
