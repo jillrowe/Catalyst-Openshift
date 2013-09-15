@@ -21,4 +21,4 @@
     domain-name = advcomp
 
 #Delete this line from your final config
-#/*Than you can push to GitHub just by git push, to OpenShift by git push openshift and to both git push all.*/
+#/*Than you can push to GitHub just by git push origin master, to OpenShift by git push openshift and to both git push all.*/
