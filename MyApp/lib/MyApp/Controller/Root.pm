@@ -46,10 +46,25 @@ sub default :Path {
 }
 
 
-sub hellos :Global {
+sub hello :Global {
     my ( $self, $c ) = @_;
 
     $c->stash(template => 'hello.tt2');
+}
+
+sub form :Global {
+    my($self, $c) = @_;
+
+    $c->log->debug("In form");
+    $c->log->debug("Params are ".Dumper($c->req->params));
+
+    if(defined $c->req->params->{test}){
+        $c->response->body("Params are ".Dumper($c->req->params));
+    }
+    else{
+        $c->stash(template => 'form.tt2');
+    }
+
 }
 =head2 end
 

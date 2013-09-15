@@ -48,12 +48,12 @@ __PACKAGE__->config(
 );
 
 #Need these options for ProxyPass
-__PACKAGE__->config->{using_frontend_proxy} = 1;
-__PACKAGE__->config->{"X-Forwarded-Port"} = 443;
-
- __PACKAGE__->apply_request_class_roles(qw/
-    Catalyst::TraitFor::Request::ProxyBase
-/);
+#__PACKAGE__->config->{using_frontend_proxy} = 1;
+#__PACKAGE__->config->{"X-Forwarded-Port"} = 443;
+#
+# __PACKAGE__->apply_request_class_roles(qw/
+#    Catalyst::TraitFor::Request::ProxyBase
+#/);
 
 # Start the application
 __PACKAGE__->setup();

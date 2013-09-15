@@ -5,18 +5,18 @@
     logallrefupdates = true
 [remote "all"]
     url = https://github.com/jillrowe/Catalyst-Openshift.git
-    url = ssh://522dc4105973ca71150000e2@test-advcomp.rhcloud.com/~/git/test.git/
+    url = ssh://lettersandnumber@test-advcomp.rhcloud.com/~/git/test.git/
 [remote "origin"]
     fetch = +refs/heads/*:refs/remotes/origin/*
     url = https://github.com/jillrowe/Catalyst-Openshift.git
 [remote "openshift"]
     fetch = +refs/heads/*:refs/remotes/origin/*
-    url = ssh://522dc4105973ca71150000e2@test-advcomp.rhcloud.com/~/git/test.git/
+    url = ssh://lettersandnumber@test-advcomp.rhcloud.com/~/git/test.git/
 [branch "master"]
      remote = origin
      merge = refs/heads/master
 [rhc]
-    app-uuid = 522dc4105973ca71150000e2
+    app-uuid = lettersandnumber
     app-name = test
     domain-name = advcomp
 
