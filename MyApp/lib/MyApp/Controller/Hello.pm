@@ -1,6 +1,7 @@
 package MyApp::Controller::Hello;
 use Moose;
 use namespace::autoclean;
+use Data::Dumper;
 
 BEGIN { extends 'Catalyst::Controller'; }
 
@@ -32,6 +33,18 @@ sub index :Path :Args(0) {
 #
 #    $c->response->body("Hello, World!");
 #}
+
+sub form :Global {
+    my($self, $c) = @_;
+
+    if($c->req->params){
+        $c->response->body("Params are ".Dumper($c->req->params));
+    }
+    else{
+        $c->stash(template => 'form.tt2');
+    }
+
+}
 
 =head1 AUTHOR
 

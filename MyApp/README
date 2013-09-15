@@ -1,3 +1,68 @@
 Run script/myapp_server.pl to test the application.
 
 Different configs for dev prod
+
+================================================================
+Works for http://blahblahblah/myapp/ and http://blahblahblah/myapp/stuff/ http://blahblahblah/myapp and http://blahblahblah/myapp/stuff
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    sendfile        on;
+    keepalive_timeout  65;
+
+    #gzip  on;
+
+server {
+       listen       127.3.209.129:8080;
+       server_name   diyapp-advcomp.rhcloud.com;
+
+        #proxy_redirect http://diyapp-advcomp.rhcloud.com:8080/ http://diyapp-advcomp.rhcloud.com/;
+        #proxy_set_header Location 127.3.209.129:8080;
+        #port_in_redirect off;
+
+       rewrite ^/myapp$ /myapp/ permanent;
+       location /myapp/ {
+           include fastcgi_params_catalyst;
+
+           root /var/lib/openshift/522f0e144382ec352300020f/app-root/runtime/repo/MyApp/root;
+
+        #       proxy_set_header X-Forwarded-Host $host;
+        #       proxy_set_header X-Forwarded-Server $host;
+        #       proxy_set_header Host $host;
+        #       proxy_set_header X-Real-IP $remote_addr;
+        #       proxy_pass        http://diyapp-advcomp.rhcloud.com:15000/myapp;
+
+           fastcgi_pass 127.3.209.129:15000;
+#          fastcgi_param  REQUEST_URI $request_uri;
+           fastcgi_param SCRIPT_NAME /myapp/;
+           fastcgi_param PATH_INFO   $fastcgi_script_name;
+
+       }
+}
+
+
+================================================================
+
+Works for http://blahblahblah, http://blahblahblah/, http://blahblahblah/stuff, and http://blahblahblah/stuff/ and serves static content correctly
+
+       location / {
+           include fastcgi_params_catalyst;
+
+           root /var/lib/openshift/522f0e144382ec352300020f/app-root/runtime/repo/MyApp/root;
+
+        #       proxy_set_header X-Forwarded-Host $host;
+        #       proxy_set_header X-Forwarded-Server $host;
+        #       proxy_set_header Host $host;
+        #       proxy_set_header X-Real-IP $remote_addr;
+        #       proxy_pass        http://diyapp-advcomp.rhcloud.com:15000/myapp;
+
+           fastcgi_pass 127.3.209.129:15000;
+#          fastcgi_param  REQUEST_URI $request_uri;
+           fastcgi_param SCRIPT_NAME /myapp/;
+           fastcgi_param PATH_INFO   $fastcgi_script_name;
+
+       }
+
+
