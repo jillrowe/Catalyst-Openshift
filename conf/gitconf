@@ -4,11 +4,11 @@
     bare = false
     logallrefupdates = true
 [remote "all"]
-    url = https://jir2004@chili.qatar-med.cornell.edu/ac-tools/openshift.git
+    url = https://github.com/jillrowe/Catalyst-Openshift.git
     url = ssh://522dc4105973ca71150000e2@test-advcomp.rhcloud.com/~/git/test.git/
 [remote "origin"]
     fetch = +refs/heads/*:refs/remotes/origin/*
-    url = https://jir2004@chili.qatar-med.cornell.edu/ac-tools/openshift.git
+    url = https://github.com/jillrowe/Catalyst-Openshift.git
 [remote "openshift"]
     fetch = +refs/heads/*:refs/remotes/origin/*
     url = ssh://522dc4105973ca71150000e2@test-advcomp.rhcloud.com/~/git/test.git/
