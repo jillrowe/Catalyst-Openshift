@@ -37,7 +37,7 @@ sub index :Path :Args(0) {
 sub form :Global {
     my($self, $c) = @_;
 
-    if(defined $c->req->params){
+    if(defined $c->req->params->{test}){
         $c->response->body("Params are ".Dumper($c->req->params));
     }
     else{
